@@ -1,0 +1,94 @@
+/* Animaciones de entrada */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Aplicar animaciones a las secciones */
+#innovacion {
+    animation: slideInLeft 1s ease-out;
+}
+
+#modelos {
+    animation: slideInRight 1s ease-out;
+}
+
+#tecnologia {
+    animation: slideInLeft 1s ease-out;
+}
+
+#testimonios {
+    animation: fadeIn 1s ease-out;
+}
+
+footer {
+    animation: fadeIn 2s ease-out;
+}
+
+/* Efectos de animación en hover */
+.innovation-item:hover {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+.model-card:hover {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+.tech-item:hover {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+.testimonial:hover {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+/* Efectos adicionales en imágenes */
+.model-card img, .tech-item img {
+    transition: transform 0.5s ease-in-out;
+}
+
+.model-card img:hover, .tech-item img:hover {
+    transform: scale(1.1);
+}
+
+.footer-content .social-links a:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
